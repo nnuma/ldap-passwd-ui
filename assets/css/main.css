@@ -4,3 +4,7 @@
 h3 {
     color: #303133;
 }
+.el-message-box {
+    max-width: 80%;
+    max-width: 80vw;
+}

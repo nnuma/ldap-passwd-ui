@@ -85,6 +85,9 @@ new Vue({
         });
     },
     showConfirm() {
+      if (!this.submittable) {
+        return;
+      }
       this.$confirm('パスワードを変更します。<br/>本当によろしいですか？', '確認', {
         confirmButtonText: 'OK',
         cancelButtonText: 'キャンセル',
