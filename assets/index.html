@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- import CSS : see https://element.eleme.io/ -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="data:;base64,=">
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <div>
+        <el-card v-loading="loading">
+          <el-container>
+            <el-header>
+              <h3>パスワード変更</h3>
+            </el-header>
+            <el-main>
+              <el-form label-position="top" :rules="rules" :model="userForm">
+                <el-form-item label="ユーザID" prop="id">
+                  <el-input v-model="userForm.id"></el-input>
+                </el-form-item>
+                <el-form-item label="現在のパスワード" prop="password">
+                  <el-input v-model="userForm.password" type="password"></el-input>
+                </el-form-item>
+                <el-form-item label="新しいパスワード" prop="newPassword">
+                  <el-input v-model="userForm.newPassword" type="password"></el-input>
+                </el-form-item>
+                <el-form-item label="新しいパスワード（確認）" prop="newPasswordConfirm">
+                  <el-input v-model="userForm.newPasswordConfirm" type="password"></el-input>
+                </el-form-item>
+                <el-form-item style="margin-top: 2em; text-align: center;">
+                  <el-row>
+                    <el-button @click="resetForm()">リセット</el-button>
+                    <el-button type="primary" :disabled="!submittable" @click="showConfirm()">変更する</el-button>
+                  </el-row>
+                </el-form-item>
+              </el-form>
+            </el-main>
+          </el-container>
+        </el-card>
+      </div>
+    </div>
+  </body>
+  <!-- import JavaScript : see https://jp.vuejs.org/ -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- import JavaScript : see https://element.eleme.io/ -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/umd/locale/ja.js"></script>
+  <script src="js/cookies_min.js"></script>
+  <script src="js/superagent.js"></script>
+  <script src="js/main.js"></script>
+</html>
