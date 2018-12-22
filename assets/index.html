@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- import CSS : see https://element.eleme.io/ -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="css/main.css">
@@ -9,7 +10,7 @@
   <body>
     <div id="app" v-cloak>
       <div>
-        <el-card v-loading="loading">
+        <el-card v-loading="loading" style="max-width: 600px; margin: 0 auto;">
           <el-container>
             <el-header>
               <h3>パスワード変更</h3>
